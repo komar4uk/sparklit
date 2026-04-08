@@ -24,7 +24,7 @@ export default function ProductPage() {
   if (!product) {
     return (
       <div className="min-h-screen pt-32 pb-16 px-8 flex items-center justify-center text-on-surface-variant">
-        Product not found.
+        {t('product.notFound')}
       </div>
     );
   }
@@ -110,7 +110,7 @@ export default function ProductPage() {
               <span className="material-symbols-outlined ml-2 text-xl">shopping_bag</span>
             </a>
             <p className="text-xs text-stone-400 text-center mt-3">
-              Secure checkout via AliExpress. We earn a small affiliate commission at no extra cost to you.
+              {t('product.affiliateNote')}
             </p>
           </div>
         </div>

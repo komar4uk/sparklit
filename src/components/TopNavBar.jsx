@@ -24,17 +24,17 @@ export default function TopNavBar() {
         <div className="hidden md:flex items-center space-x-8">
           <NavLink to="/" className={navLinkClass}>{t('nav.home')}</NavLink>
           <NavLink to="/shop" className={navLinkClass}>{t('nav.shop')}</NavLink>
+          <NavLink to="/categories" className={navLinkClass}>{t('categories.pageTitle').split(' ')[0]}</NavLink>
           <NavLink to="/blog" className={navLinkClass}>{t('nav.blog')}</NavLink>
-          <NavLink to="/contact" className={navLinkClass}>{t('nav.contact')}</NavLink>
+          <NavLink to="/about" className={navLinkClass}>{t('nav.about')}</NavLink>
         </div>
         
         <div className="hidden md:flex items-center space-x-6">
-          <button 
-            onClick={toggleLanguage} 
-            className="text-sm font-bold uppercase tracking-wider text-stone-500 hover:text-teal-600 transition-colors"
-          >
-            {language === 'en' ? 'EN / UA' : 'UA / EN'}
-          </button>
+          <div className="flex items-center gap-2 text-sm font-bold uppercase tracking-wider">
+            <button onClick={() => language !== 'en' && toggleLanguage()} className={language === 'en' ? 'text-teal-600 underline underline-offset-4 outline-none' : 'text-stone-400 hover:text-teal-600'}>EN</button>
+            <span className="text-stone-300">/</span>
+            <button onClick={() => language !== 'ua' && toggleLanguage()} className={language === 'ua' ? 'text-teal-600 underline underline-offset-4 outline-none' : 'text-stone-400 hover:text-teal-600'}>UA</button>
+          </div>
 
           <Link to="/admin" className="bg-primary text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide hover:bg-primary-dim transition-all duration-200 active:scale-95">
             {t('nav.admin')}
@@ -43,12 +43,11 @@ export default function TopNavBar() {
 
         {/* Mobile Toggle Button */}
         <div className="md:hidden flex items-center z-50 gap-4">
-          <button 
-            onClick={toggleLanguage} 
-            className="text-xs font-bold uppercase text-stone-500"
-          >
-            {language.toUpperCase()}
-          </button>
+          <div className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider">
+            <button onClick={() => language !== 'en' && toggleLanguage()} className={language === 'en' ? 'text-teal-600 underline underline-offset-4 outline-none' : 'text-stone-400'}>EN</button>
+            <span className="text-stone-300">/</span>
+            <button onClick={() => language !== 'ua' && toggleLanguage()} className={language === 'ua' ? 'text-teal-600 underline underline-offset-4 outline-none' : 'text-stone-400'}>UA</button>
+          </div>
           <button 
             className="text-on-surface-variant p-2 focus:outline-none" 
             onClick={() => setIsOpen(!isOpen)}
@@ -64,8 +63,9 @@ export default function TopNavBar() {
         <div className="px-8 py-6 flex flex-col space-y-6 text-center">
           <NavLink to="/" onClick={closeMenu} className={navLinkClass}>{t('nav.home')}</NavLink>
           <NavLink to="/shop" onClick={closeMenu} className={navLinkClass}>{t('nav.shop')}</NavLink>
+          <NavLink to="/categories" onClick={closeMenu} className={navLinkClass}>{t('categories.pageTitle').split(' ')[0]}</NavLink>
           <NavLink to="/blog" onClick={closeMenu} className={navLinkClass}>{t('nav.blog')}</NavLink>
-          <NavLink to="/contact" onClick={closeMenu} className={navLinkClass}>{t('nav.contact')}</NavLink>
+          <NavLink to="/about" onClick={closeMenu} className={navLinkClass}>{t('nav.about')}</NavLink>
           <div className="pt-4 border-t border-outline-variant/10">
             <Link to="/admin" onClick={closeMenu} className="inline-block w-full bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-primary-dim transition-all">
               {t('nav.admin')}

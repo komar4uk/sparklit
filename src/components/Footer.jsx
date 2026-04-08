@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="space-y-6">
           <div className="font-serif text-xl text-stone-800 dark:text-stone-200">Sparklit</div>
           <p className="text-stone-600 dark:text-stone-400 text-sm leading-relaxed">
-            Curating the finest diamond painting kits for artists of all levels. Excellence in every facet.
+            {t('footer.desc')}
           </p>
         </div>
         <div className="space-y-4">
@@ -21,17 +21,17 @@ export default function Footer() {
           </ul>
         </div>
         <div className="space-y-4">
-          <h4 className="font-bold text-on-surface text-sm uppercase tracking-widest">Support</h4>
+          <h4 className="font-bold text-on-surface text-sm uppercase tracking-widest">{t('footer.support')}</h4>
           <ul className="space-y-2">
             <li><Link to="/contact" className="text-stone-500 hover:text-teal-500 hover:underline underline-offset-4 text-sm transition-all">{t('nav.contact')}</Link></li>
           </ul>
         </div>
         <div className="space-y-4">
-          <h4 className="font-bold text-on-surface text-sm uppercase tracking-widest">Newsletter</h4>
+          <h4 className="font-bold text-on-surface text-sm uppercase tracking-widest">{t('footer.newsletter')}</h4>
           <div className="flex flex-col gap-4">
-            <p className="text-xs text-stone-500 leading-relaxed">Subscribe to our newsletter for exclusive drops and discounts.</p>
+            <p className="text-xs text-stone-500 leading-relaxed">{t('footer.newsletterDesc')}</p>
             <div className="relative">
-              <input type="email" placeholder="Email address" className="w-full bg-transparent border-b border-stone-300 dark:border-stone-700 py-2 text-sm focus:outline-none focus:border-teal-500 transition-colors" />
+              <input type="email" placeholder={t('contact.email') || 'Email address'} className="w-full bg-transparent border-b border-stone-300 dark:border-stone-700 py-2 text-sm focus:outline-none focus:border-teal-500 transition-colors" />
               <button className="absolute right-0 top-1/2 -translate-y-1/2 text-teal-600" aria-label="Subscribe">
                 <span className="material-symbols-outlined">north_east</span>
               </button>
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-8 py-8 border-t border-stone-200/10">
-        <p className="font-sans text-sm text-stone-600 dark:text-stone-400 text-center">© 2024 Sparklit. Curated Diamond Painting Excellence.</p>
+        <p className="font-sans text-sm text-stone-600 dark:text-stone-400 text-center">© {new Date().getFullYear()} {t('footer.copyright')}</p>
       </div>
     </footer>
   );

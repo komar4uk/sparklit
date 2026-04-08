@@ -1,8 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import products from '../data/products.json';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Categories() {
+  const { t } = useLanguage();
   const categories = [...new Set(products.map(p => p.category))];
   
   const getCategoryImage = (cat) => {
@@ -13,14 +15,14 @@ export default function Categories() {
   return (
     <>
       <Helmet>
-        <title>Categories | Sparklit</title>
-        <meta name="description" content="Browse diamond painting kits by category." />
+        <title>{t('categories.pageTitle')}</title>
+        <meta name="description" content={t('categories.pageDesc')} />
       </Helmet>
       
       <main className="pt-32 pb-20 max-w-7xl mx-auto px-8 min-h-screen">
         <div className="mb-16">
-          <span className="label-md uppercase tracking-widest text-primary font-bold text-[10px] mb-2 block">Our Collections</span>
-          <h1 className="text-5xl font-headline text-on-surface mb-4">Browse Categories</h1>
+          <span className="label-md uppercase tracking-widest text-primary font-bold text-[10px] mb-2 block">{t('categories.tag')}</span>
+          <h1 className="text-5xl font-headline text-on-surface mb-4">{t('categories.title')}</h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -36,7 +38,7 @@ export default function Categories() {
                 </div>
               </div>
               <p className="font-bold text-on-surface-variant group-hover:text-primary transition-colors text-xl">{cat}</p>
-              <p className="text-sm text-on-surface-variant">{products.filter(p => p.category === cat).length} kits</p>
+              <p className="text-sm text-on-surface-variant">{products.filter(p => p.category === cat).length} {t('categories.kits')}</p>
             </Link>
           ))}
         </div>

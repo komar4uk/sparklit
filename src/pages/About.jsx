@@ -1,12 +1,15 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function About() {
+  const { t } = useLanguage();
+
   return (
     <>
       <Helmet>
-        <title>Our Story | Sparklit</title>
-        <meta name="description" content="Discover the story behind Sparklit and our mission to elevate the art of diamond painting." />
+        <title>{t('about.pageTitle')}</title>
+        <meta name="description" content={t('about.pageDesc')} />
       </Helmet>
       
       <main className="pt-32 pb-20 overflow-x-hidden">
@@ -14,12 +17,12 @@ export default function About() {
         <header className="max-w-7xl mx-auto px-8 mb-24">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div className="max-w-2xl">
-              <span className="uppercase tracking-widest text-[10px] font-bold text-primary mb-4 block">Curated Diamond Painting</span>
-              <h1 className="text-6xl md:text-8xl font-serif leading-tight tracking-tight text-on-surface">The Art of Stillness.</h1>
+              <span className="uppercase tracking-widest text-[10px] font-bold text-primary mb-4 block">{t('about.tag')}</span>
+              <h1 className="text-6xl md:text-8xl font-serif leading-tight tracking-tight text-on-surface">{t('about.title')}</h1>
             </div>
             <div className="pb-4">
               <p className="text-on-surface-variant max-w-xs leading-relaxed">
-                We believe every sparkling bead is a moment of mindfulness, meticulously designed for the modern soul.
+                {t('about.desc')}
               </p>
             </div>
           </div>
@@ -36,20 +39,20 @@ export default function About() {
                 className="relative rounded-xl w-full h-[600px] object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" 
               />
               <div className="absolute -bottom-10 -right-10 hidden xl:block w-64 h-64 bg-secondary-container rounded-xl flex items-center justify-center p-8 text-on-secondary-container">
-                <p className="font-serif italic text-lg leading-snug">"Sparklit isn't just about the finish; it's about the rhythmic journey of creation."</p>
+                <p className="font-serif italic text-lg leading-snug">"{t('about.quote')}"</p>
               </div>
             </div>
             
             <div className="lg:col-span-5 lg:pl-12 pt-12 lg:pt-32">
-              <h2 className="text-4xl font-serif mb-8 text-on-surface">Our Story</h2>
+              <h2 className="text-4xl font-serif mb-8 text-on-surface">{t('about.storyTitle')}</h2>
               <div className="space-y-6 text-on-surface-variant font-body leading-relaxed">
-                <p>Sparklit began in a sun-drenched studio in 2024, born from a simple observation: the world was moving too fast. We found that the meditative repetition of diamond painting offered a sanctuary from the digital noise.</p>
-                <p>We didn't just want to sell kits; we wanted to curate experiences. Every design in our collection is hand-vetted for color accuracy, drill quality, and emotional resonance. We partner with independent artists to ensure that your wall art is as original as your creative spirit.</p>
-                <p>Today, Sparklit stands as a beacon for hobbyists who value excellence over convenience, and art over commodity.</p>
+                <p>{t('about.storyP1')}</p>
+                <p>{t('about.storyP2')}</p>
+                <p>{t('about.storyP3')}</p>
               </div>
               <div className="mt-12">
                 <Link to="/shop" className="bg-primary text-on-primary px-8 py-4 rounded-full font-medium hover:bg-primary-dim transition-all duration-300">
-                  View Our Gallery
+                  {t('about.viewGallery')}
                 </Link>
               </div>
             </div>
@@ -62,18 +65,18 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
               <div className="space-y-4">
                 <span className="material-symbols-outlined text-primary text-3xl">brush</span>
-                <h3 className="text-xl font-serif font-bold">Artisanal Curation</h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">Every pattern is refined by our in-house designers to ensure seamless color transitions and flawless results.</p>
+                <h3 className="text-xl font-serif font-bold">{t('about.v1Title')}</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">{t('about.v1Desc')}</p>
               </div>
               <div className="space-y-4">
                 <span className="material-symbols-outlined text-primary text-3xl">eco</span>
-                <h3 className="text-xl font-serif font-bold">Sustainable Craft</h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">We utilize eco-friendly resin drills and premium canvas materials that stand the test of time.</p>
+                <h3 className="text-xl font-serif font-bold">{t('about.v2Title')}</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">{t('about.v2Desc')}</p>
               </div>
               <div className="space-y-4">
                 <span className="material-symbols-outlined text-primary text-3xl">volunteer_activism</span>
-                <h3 className="text-xl font-serif font-bold">Artist First</h3>
-                <p className="text-sm text-on-surface-variant leading-relaxed">We champion the creators. A portion of every sale goes directly to the original artist behind the pattern.</p>
+                <h3 className="text-xl font-serif font-bold">{t('about.v3Title')}</h3>
+                <p className="text-sm text-on-surface-variant leading-relaxed">{t('about.v3Desc')}</p>
               </div>
             </div>
           </div>

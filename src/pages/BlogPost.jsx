@@ -22,7 +22,7 @@ export default function BlogPost() {
   if (!post) {
     return (
       <div className="min-h-screen pt-32 pb-16 px-8 flex items-center justify-center text-on-surface-variant">
-        Article not found.
+        {t('blog.notFound')}
       </div>
     );
   }
@@ -64,18 +64,18 @@ export default function BlogPost() {
           {post.excerpt}
         </p>
         
-        <h2>The Basics</h2>
-        <p>Diamond painting is a combination of cross-stitch and paint-by-numbers. You use an applicator to apply hundreds of sparkling resin rhinestones, one-by-one, on an adhesive color-coded canvas painting. The end result is a vivid, shimmering work of art.</p>
+        <h2>{t('blog.mockH1')}</h2>
+        <p>{t('blog.mockP1')}</p>
         
-        <h3>Why People Love It</h3>
+        <h3>{t('blog.mockH2')}</h3>
         <ul>
-          <li><strong>Relaxing and Therapeutic</strong>: The process is incredibly calming and helps reduce stress and anxiety.</li>
-          <li><strong>Easy to Learn</strong>: Unlike cross-stitch which requires some skill, diamond painting is foolproof.</li>
-          <li><strong>Stunning Results</strong>: Even beginners can create museum-quality, sparkling pieces.</li>
+          <li><strong>{t('blog.mockLi1')}</strong>: {t('blog.mockLi1t')}</li>
+          <li><strong>{t('blog.mockLi2')}</strong>: {t('blog.mockLi2t')}</li>
+          <li><strong>{t('blog.mockLi3')}</strong>: {t('blog.mockLi3t')}</li>
         </ul>
 
-        <h2>Final Thoughts</h2>
-        <p>We hope this guide has given you a better understanding of what to look for and how to get started. Don't be afraid to make mistakes—the joy is in the journey to creating something beautiful.</p>
+        <h2>{t('blog.mockH3')}</h2>
+        <p>{t('blog.mockP2')}</p>
       </article>
 
       {/* Related Reading */}

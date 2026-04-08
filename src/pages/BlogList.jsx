@@ -60,7 +60,7 @@ export default function BlogList() {
                   {post.excerpt}
                 </p>
                 <div className="pt-2 text-teal-600 dark:text-teal-400 font-bold text-sm tracking-wide group-hover:translate-x-2 transition-transform inline-flex items-center">
-                  Read Article <span className="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+                  {t('blog.readArticle')} <span className="material-symbols-outlined text-sm ml-1">arrow_forward</span>
                 </div>
               </div>
             </Link>

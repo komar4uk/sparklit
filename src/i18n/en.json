@@ -7,7 +7,8 @@
     "tutorials": "Tutorials",
     "blog": "Blog",
     "contact": "Contact & FAQ",
-    "admin": "Admin"
+    "admin": "Admin",
+    "about": "About"
   },
   "common": {
     "search": "Search kits...",
@@ -17,7 +18,8 @@
     "cancel": "Cancel",
     "delete": "Delete",
     "edit": "Edit",
-    "addNew": "Add New"
+    "addNew": "Add New",
+    "viewProduct": "View Product"
   },
   "product": {
     "buyOnAli": "Buy on AliExpress",
@@ -27,24 +29,117 @@
     "relatedProducts": "Related Products",
     "beginnerFriendly": "Beginner Friendly",
     "intermediate": "Intermediate",
-    "advanced": "Advanced"
+    "advanced": "Advanced",
+    "affiliateNote": "Secure checkout via AliExpress. We earn a small affiliate commission at no extra cost to you.",
+    "notFound": "Product not found."
   },
   "blog": {
     "hubTitle": "Blog",
     "hubSubtitle": "Discover tips, inspiration, and guides to make your diamond painting experience even more enjoyable.",
     "relatedReadings": "Related Readings",
-    "viewAll": "View All Stories"
+    "viewAll": "View All Stories",
+    "readArticle": "Read Article",
+    "notFound": "Article not found.",
+    "mockH1": "The Basics",
+    "mockP1": "Diamond painting is a combination of cross-stitch and paint-by-numbers. You use an applicator to apply hundreds of sparkling resin rhinestones, one-by-one, on an adhesive color-coded canvas painting. The end result is a vivid, shimmering work of art.",
+    "mockH2": "Why People Love It",
+    "mockLi1": "Relaxing and Therapeutic",
+    "mockLi1t": "The process is incredibly calming and helps reduce stress and anxiety.",
+    "mockLi2": "Easy to Learn",
+    "mockLi2t": "Unlike cross-stitch which requires some skill, diamond painting is foolproof.",
+    "mockLi3": "Stunning Results",
+    "mockLi3t": "Even beginners can create museum-quality, sparkling pieces.",
+    "mockH3": "Final Thoughts",
+    "mockP2": "We hope this guide has given you a better understanding of what to look for and how to get started. Don't be afraid to make mistakes—the joy is in the journey to creating something beautiful."
   },
-  "admin": {
-    "dashboard": "Dashboard",
-    "products": "Products",
-    "blog": "Blog",
+  "home": {
+    "heroTag": "Curated Brilliance",
+    "heroTitle": "Your Daily Dose<br/>of Sparkle",
+    "heroDesc": "Discover the meditative art of diamond painting with our curated collection of premium kits designed for the modern creator.",
+    "exploreCmd": "Explore Collections",
+    "catsTag": "Categories",
+    "catsTitle": "Find Your Flow",
+    "trendingTag": "Trending Now",
+    "bestSellers": "Best Sellers",
+    "beginnerTag": "First Time?",
+    "beginnerTitle": "New to Diamond Painting? Start Here",
+    "beginnerDesc": "Our comprehensive guide covers everything from setting up your workspace to mastering the \"multi-placer\" tool. We've simplified the sparkle for you.",
+    "readBeginnerGuide": "Read the Beginner Guide"
+  },
+  "shop": {
+    "pageTitle": "All Diamond Art Kits | Sparklit",
+    "pageDesc": "Discover our premium range of diamond painting kits. Shop all designs from meditative landscapes to vibrant abstracts.",
+    "tag": "Curated Collection",
+    "title": "All Diamond Art Kits",
+    "desc": "Discover our premium range of diamond painting kits. From meditative landscapes to vibrant abstracts, each set is curated for a mindful crafting experience.",
     "categories": "Categories",
-    "analytics": "Analytics",
-    "settings": "Settings",
-    "addKit": "Add New Kit",
-    "preview": "Preview",
-    "saveDraft": "Save Draft",
-    "publish": "Publish to Gallery"
+    "difficulty": "Difficulty",
+    "noProducts": "No products found in this category.",
+    "artisanTitle": "Artisan Support",
+    "artisanDesc": "Every purchase supports our featured independent illustrators.",
+    "learnMore": "Learn More"
+  },
+  "categories": {
+    "pageTitle": "Categories | Sparklit",
+    "pageDesc": "Browse diamond painting kits by category.",
+    "tag": "Our Collections",
+    "title": "Browse Categories",
+    "kits": "kits"
+  },
+  "about": {
+    "pageTitle": "Our Story | Sparklit",
+    "pageDesc": "Discover the story behind Sparklit and our mission to elevate the art of diamond painting.",
+    "tag": "Curated Diamond Painting",
+    "title": "The Art of Stillness.",
+    "desc": "We believe every sparkling bead is a moment of mindfulness, meticulously designed for the modern soul.",
+    "quote": "Sparklit isn't just about the finish; it's about the rhythmic journey of creation.",
+    "storyTitle": "Our Story",
+    "storyP1": "Sparklit began in a sun-drenched studio in 2024, born from a simple observation: the world was moving too fast. We found that the meditative repetition of diamond painting offered a sanctuary from the digital noise.",
+    "storyP2": "We didn't just want to sell kits; we wanted to curate experiences. Every design in our collection is hand-vetted for color accuracy, drill quality, and emotional resonance. We partner with independent artists to ensure that your wall art is as original as your creative spirit.",
+    "storyP3": "Today, Sparklit stands as a beacon for hobbyists who value excellence over convenience, and art over commodity.",
+    "viewGallery": "View Our Gallery",
+    "v1Title": "Artisanal Curation",
+    "v1Desc": "Every pattern is refined by our in-house designers to ensure seamless color transitions and flawless results.",
+    "v2Title": "Sustainable Craft",
+    "v2Desc": "We utilize eco-friendly resin drills and premium canvas materials that stand the test of time.",
+    "v3Title": "Artist First",
+    "v3Desc": "We champion the creators. A portion of every sale goes directly to the original artist behind the pattern."
+  },
+  "contact": {
+    "title": "We're Here to Help",
+    "desc": "Have a question about diamond painting, our curated selections, or an order? Check our FAQ below or send us a message directly.",
+    "sendMessage": "Send a Message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "sendBtn": "Send Message",
+    "faqTitle": "Frequently Asked Questions",
+    "disclosureTitle": "Affiliate Disclosure",
+    "disclosureDesc": "Sparklit is a curation platform. We link to high-quality products on AliExpress and may earn a commission on purchases made through our links, supporting our site.",
+    "faqs": [
+      {
+        "q": "Are your kits suitable for beginners?",
+        "a": "Absolutely! We label our kits with difficulty levels. Look for the 'Beginner Friendly' badge which features clear, distinct colors and manageable canvas sizes."
+      },
+      {
+        "q": "Do they come with all necessary tools?",
+        "a": "When purchasing via our partner links, the standard kits typically include the canvas, resin diamonds, applicator pen, wax pad, and a basic sorting tray."
+      },
+      {
+        "q": "How long does shipping take?",
+        "a": "Shipping is handled by AliExpress. Typically, it takes 2-4 weeks depending on your location. We recommend checking the estimated delivery date on the product page before purchasing."
+      },
+      {
+        "q": "What is the difference between round and square drills?",
+        "a": "Round drills are easier and faster to place, making them great for beginners. Square drills fit together seamlessly without gaps, creating a more 'mosaic' look that many advanced users prefer."
+      }
+    ]
+  },
+  "footer": {
+    "desc": "Curating the finest diamond painting kits for artists of all levels. Excellence in every facet.",
+    "support": "Support",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Subscribe to our newsletter for exclusive drops and discounts.",
+    "copyright": "Sparklit. Curated Diamond Painting Excellence."
   }
 }
