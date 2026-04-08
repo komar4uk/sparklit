@@ -8,11 +8,14 @@ export default function AllProducts() {
   const [activeCategory, setActiveCategory] = useState("All");
   const { t } = useLanguage();
 
-  const categories = ["All", ...new Set(products.map(p => p.category))];
+  const categories = ["All", ...new Set(products.map(p => {
+    const cat = p.category || '';
+    return cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
+  }))];
   
   const filteredProducts = activeCategory === "All" 
     ? products 
-    : products.filter(p => p.category === activeCategory);
+    : products.filter(p => (p.category || '').toLowerCase() === activeCategory.toLowerCase());
 
   return (
     <>
@@ -43,7 +46,7 @@ export default function AllProducts() {
                     >
                       {cat === "All" ? t('nav.shop') : cat} 
                       <span className={`text-[10px] px-2 rounded-full ${activeCategory === cat ? "bg-primary-container" : "bg-surface-container"}`}>
-                        {cat === "All" ? products.length : products.filter(p => p.category === cat).length}
+                        {cat === "All" ? products.length : products.filter(p => (p.category || '').toLowerCase() === cat.toLowerCase()).length}
                       </span>
                     </li>
                   ))}

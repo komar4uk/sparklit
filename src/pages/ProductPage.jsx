@@ -19,7 +19,7 @@ export default function ProductPage() {
       setProduct(found);
       setActiveImage(found.image);
       
-      let others = productsData.filter(p => p.category === found.category && p.id !== found.id);
+      let others = productsData.filter(p => (p.category || '').toLowerCase() === (found.category || '').toLowerCase() && p.id !== found.id);
       if (others.length < 3) {
          const fallback = productsData.filter(p => p.id !== found.id && !others.find(o => o.id === p.id));
          others = [...others, ...fallback];
@@ -36,13 +36,15 @@ export default function ProductPage() {
     );
   }
 
-  const priceNum = Number(product.price);
+  const priceStr = String(product.price || '0').replace(/[^0-9.]/g, '');
+  const priceNum = parseFloat(priceStr) || 0;
   const priceDisplay = language === 'en' ? `$${priceNum.toFixed(2)}` : `₴${(priceNum * 41).toFixed(0)}`;
   const oldPriceDisplay = language === 'en' ? `$${(priceNum * 1.3).toFixed(2)}` : `₴${(priceNum * 41 * 1.3).toFixed(0)}`;
   
   let diffTrans = 'product.intermediate';
   if(product.difficulty?.toLowerCase() === 'beginner') diffTrans = 'product.beginnerFriendly';
   if(product.difficulty?.toLowerCase() === 'advanced') diffTrans = 'product.advanced';
+  if(product.difficulty?.toLowerCase() === 'medium') diffTrans = 'product.intermediate'; // Map Medium to Intermediate trans
 
   const galleryImages = [product.image, ...(product.images || [])];
 

@@ -5,7 +5,9 @@ import { useLanguage } from '../context/LanguageContext';
 export default function ProductCard({ product }) {
   const { language } = useLanguage();
 
-  const priceNum = Number(product.price);
+  // Handle both numeric and string prices (e.g., "$4.37" or 4.37)
+  const priceStr = String(product.price || '0').replace(/[^0-9.]/g, '');
+  const priceNum = parseFloat(priceStr) || 0;
   const priceDisplay = language === 'en' ? `$${priceNum.toFixed(2)}` : `₴${(priceNum * 41).toFixed(0)}`;
 
   return (
