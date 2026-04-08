@@ -10,14 +10,22 @@ export default function ProductPage() {
   const { t, language } = useLanguage();
   const [product, setProduct] = useState(null);
   const [related, setRelated] = useState([]);
+  const [activeImage, setActiveImage] = useState('');
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     const found = productsData.find(p => p.id === id);
     if (found) {
       setProduct(found);
-      const others = productsData.filter(p => p.category === found.category && p.id !== found.id).slice(0, 4);
-      setRelated(others);
+      setActiveImage(found.image);
+      
+      // Get 4 related products
+      let others = productsData.filter(p => p.category === found.category && p.id !== found.id);
+      if (others.length < 4) {
+         const fallback = productsData.filter(p => p.id !== found.id && !others.find(o => o.id === p.id));
+         others = [...others, ...fallback];
+      }
+      setRelated(others.slice(0, 4));
     }
   }, [id]);
 
@@ -34,6 +42,9 @@ export default function ProductPage() {
   let diffTrans = 'product.intermediate';
   if(product.difficulty?.toLowerCase() === 'beginner') diffTrans = 'product.beginnerFriendly';
   if(product.difficulty?.toLowerCase() === 'advanced') diffTrans = 'product.advanced';
+
+  // Combine main image with optional 'images' array if it exists in the future backend data structure
+  const galleryImages = [product.image, ...(product.images || [])];
 
   return (
     <main className="pt-24 pb-16 px-4 sm:px-8 max-w-7xl mx-auto min-h-screen">
@@ -54,11 +65,11 @@ export default function ProductPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
         {/* Image Gallery */}
         <div className="space-y-4">
-          <div className="aspect-[4/5] bg-stone-100 rounded-2xl overflow-hidden shadow-sm relative">
+          <div className="aspect-[4/5] bg-stone-100 dark:bg-stone-900 rounded-2xl overflow-hidden shadow-sm relative group">
             <img 
-              src={product.image} 
+              src={activeImage} 
               alt={product.name} 
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-opacity duration-500"
             />
             {product.badge && (
               <div className="absolute top-4 right-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold">
@@ -66,6 +77,21 @@ export default function ProductPage() {
               </div>
             )}
           </div>
+          
+          {/* Thumbnails */}
+          {galleryImages.length > 1 && (
+            <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+              {galleryImages.map((img, idx) => (
+                <button 
+                  key={idx}
+                  onClick={() => setActiveImage(img)}
+                  className={`flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border-2 transition-all duration-300 ${activeImage === img ? 'border-teal-500 opacity-100 ring-2 ring-teal-500/20' : 'border-transparent opacity-60 hover:opacity-100 bg-stone-100 dark:bg-stone-900'}`}
+                >
+                  <img src={img} alt={`${product.name} view ${idx + 1}`} className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Product Details */}
@@ -83,7 +109,7 @@ export default function ProductPage() {
           </div>
 
           <div className="py-6 border-y border-stone-200 dark:border-stone-800">
-            <p className="text-stone-600 dark:text-stone-400 font-sans leading-relaxed">
+            <p className="text-stone-600 dark:text-stone-400 font-sans leading-relaxed whitespace-pre-line">
               {product.description}
             </p>
           </div>
@@ -109,7 +135,7 @@ export default function ProductPage() {
               {t('product.buyOnAli')}
               <span className="material-symbols-outlined ml-2 text-xl">shopping_bag</span>
             </a>
-            <p className="text-xs text-stone-400 text-center mt-3">
+            <p className="text-xs text-stone-500 dark:text-stone-400 text-center mt-4">
               {t('product.affiliateNote')}
             </p>
           </div>
