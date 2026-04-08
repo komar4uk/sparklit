@@ -6,6 +6,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 export default function AllProducts() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [activeDifficulty, setActiveDifficulty] = useState("All");
   const { t } = useLanguage();
 
   const categories = ["All", ...new Set(products.map(p => {
@@ -13,9 +14,11 @@ export default function AllProducts() {
     return cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
   }))];
   
-  const filteredProducts = activeCategory === "All" 
-    ? products 
-    : products.filter(p => (p.category || '').toLowerCase() === activeCategory.toLowerCase());
+  const filteredProducts = products.filter(p => {
+    const catMatch = activeCategory === "All" || (p.category || '').toLowerCase() === activeCategory.toLowerCase();
+    const diffMatch = activeDifficulty === "All" || p.difficulty === activeDifficulty;
+    return catMatch && diffMatch;
+  });
 
   return (
     <>
@@ -55,16 +58,31 @@ export default function AllProducts() {
               
               <div className="pt-6">
                 <h3 className="text-sm font-bold uppercase tracking-widest text-on-surface-variant mb-4">{t('shop.difficulty')}</h3>
-                <div className="space-y-3">
-                  {['Beginner', 'Intermediate', 'Advanced'].map((diff, i) => {
-                    let transKey = 'product.intermediate';
-                    if(diff === 'Beginner') transKey = 'product.beginnerFriendly';
-                    if(diff === 'Advanced') transKey = 'product.advanced';
+                <div className="space-y-2">
+                  {['All', 'Beginner', 'Medium', 'Advanced'].map((diff, i) => {
+                    let label = diff;
+                    if(diff === 'All') label = t('nav.shop');
+                    if(diff === 'Beginner') label = t('product.beginnerFriendly');
+                    if(diff === 'Medium') label = t('product.intermediate');
+                    if(diff === 'Advanced') label = t('product.advanced');
+
                     return (
-                      <label key={i} className="flex items-center gap-3 cursor-pointer group">
-                        <div className="w-4 h-4 rounded-sm border-2 border-outline-variant group-hover:border-primary transition-colors"></div>
-                        <span className="text-sm font-body text-on-surface-variant">{t(transKey)}</span>
-                      </label>
+                      <div 
+                        key={i} 
+                        onClick={() => setActiveDifficulty(diff)}
+                        className="flex items-center gap-3 cursor-pointer group"
+                      >
+                        <div className={`w-4 h-4 rounded-sm border-2 transition-all flex items-center justify-center ${activeDifficulty === diff ? "border-primary bg-primary" : "border-outline-variant group-hover:border-primary"}`}>
+                          {activeDifficulty === diff && (
+                            <svg className="w-2.5 h-2.5 text-on-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={4} d="M5 13l4 4L19 7" />
+                            </svg>
+                          )}
+                        </div>
+                        <span className={`text-sm font-body transition-colors ${activeDifficulty === diff ? "text-primary font-semibold" : "text-on-surface-variant hover:text-primary"}`}>
+                          {label}
+                        </span>
+                      </div>
                     );
                   })}
                 </div>
