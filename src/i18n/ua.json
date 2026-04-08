@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Головна",
+    "shop": "Магазин наборів",
+    "gallery": "Галерея",
+    "artists": "Художники",
+    "tutorials": "Навчання",
+    "blog": "Блог",
+    "contact": "Контакти та FAQ",
+    "admin": "Адмін"
+  },
+  "common": {
+    "search": "Шукати набори...",
+    "shopKit": "Купити набір",
+    "readMore": "Читати далі",
+    "save": "Зберегти зміни",
+    "cancel": "Скасувати",
+    "delete": "Видалити",
+    "edit": "Редагувати",
+    "addNew": "Додати новий"
+  },
+  "product": {
+    "buyOnAli": "Придбати на AliExpress",
+    "difficulty": "Складність",
+    "size": "Розмір",
+    "category": "Категорія",
+    "relatedProducts": "Подібні товари",
+    "beginnerFriendly": "Для початківців",
+    "intermediate": "Середній рівень",
+    "advanced": "Складний рівень"
+  },
+  "blog": {
+    "hubTitle": "Блог",
+    "hubSubtitle": "Поради, натхнення та довідники, щоб зробити ваше малювання алмазами ще приємнішим.",
+    "relatedReadings": "Схожі статті",
+    "viewAll": "Усі статті"
+  },
+  "admin": {
+    "dashboard": "Дашборд",
+    "products": "Товари",
+    "blog": "Блог",
+    "categories": "Категорії",
+    "analytics": "Аналітика",
+    "settings": "Налаштування",
+    "addKit": "Додати новий набір",
+    "preview": "Попередній перегляд",
+    "saveDraft": "Зберегти чернетку",
+    "publish": "Опублікувати в галерею"
+  }
+}

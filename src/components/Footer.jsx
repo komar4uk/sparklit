@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="w-full border-t border-stone-200/20 dark:border-stone-800/20 bg-stone-100 dark:bg-stone-950">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 py-16">
@@ -11,17 +14,16 @@ export default function Footer() {
           </p>
         </div>
         <div className="space-y-4">
-          <h4 className="font-bold text-on-surface text-sm uppercase tracking-widest">Shop</h4>
+          <h4 className="font-bold text-on-surface text-sm uppercase tracking-widest">{t('nav.shop') || 'Shop'}</h4>
           <ul className="space-y-2">
-            <li><Link to="/shop" className="text-stone-500 hover:text-teal-500 hover:underline underline-offset-4 text-sm transition-all">All Products</Link></li>
-            <li><Link to="/categories" className="text-stone-500 hover:text-teal-500 hover:underline underline-offset-4 text-sm transition-all">Categories</Link></li>
+            <li><Link to="/shop" className="text-stone-500 hover:text-teal-500 hover:underline underline-offset-4 text-sm transition-all">{t('nav.shop')}</Link></li>
+            <li><Link to="/blog" className="text-stone-500 hover:text-teal-500 hover:underline underline-offset-4 text-sm transition-all">{t('nav.blog')}</Link></li>
           </ul>
         </div>
         <div className="space-y-4">
           <h4 className="font-bold text-on-surface text-sm uppercase tracking-widest">Support</h4>
           <ul className="space-y-2">
-            <li><Link to="/faq" className="text-stone-500 hover:text-teal-500 hover:underline underline-offset-4 text-sm transition-all">FAQ</Link></li>
-            <li><Link to="/contact" className="text-stone-500 hover:text-teal-500 hover:underline underline-offset-4 text-sm transition-all">Contact Us</Link></li>
+            <li><Link to="/contact" className="text-stone-500 hover:text-teal-500 hover:underline underline-offset-4 text-sm transition-all">{t('nav.contact')}</Link></li>
           </ul>
         </div>
         <div className="space-y-4">

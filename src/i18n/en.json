@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Home",
+    "shop": "Shop Kits",
+    "gallery": "Gallery",
+    "artists": "Artists",
+    "tutorials": "Tutorials",
+    "blog": "Blog",
+    "contact": "Contact & FAQ",
+    "admin": "Admin"
+  },
+  "common": {
+    "search": "Search kits...",
+    "shopKit": "Shop Kit",
+    "readMore": "Read more",
+    "save": "Save Changes",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "addNew": "Add New"
+  },
+  "product": {
+    "buyOnAli": "Buy on AliExpress",
+    "difficulty": "Difficulty",
+    "size": "Canvas Size",
+    "category": "Category",
+    "relatedProducts": "Related Products",
+    "beginnerFriendly": "Beginner Friendly",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "blog": {
+    "hubTitle": "Blog",
+    "hubSubtitle": "Discover tips, inspiration, and guides to make your diamond painting experience even more enjoyable.",
+    "relatedReadings": "Related Readings",
+    "viewAll": "View All Stories"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "blog": "Blog",
+    "categories": "Categories",
+    "analytics": "Analytics",
+    "settings": "Settings",
+    "addKit": "Add New Kit",
+    "preview": "Preview",
+    "saveDraft": "Save Draft",
+    "publish": "Publish to Gallery"
+  }
+}

@@ -1,35 +1,68 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { LanguageProvider } from './context/LanguageContext';
+
+// Components
 import TopNavBar from './components/TopNavBar';
 import Footer from './components/Footer';
+
+// Public Pages
 import Home from './pages/Home';
 import AllProducts from './pages/AllProducts';
 import Categories from './pages/Categories';
-import Blog from './pages/Blog';
+import BlogList from './pages/BlogList';
+import BlogPost from './pages/BlogPost';
+import ProductPage from './pages/ProductPage';
+import ContactFAQ from './pages/ContactFAQ';
 import About from './pages/About';
-import FAQ from './pages/FAQ';
-import Contact from './pages/Contact';
+
+// Admin Pages
+import AdminLayout from './pages/admin/AdminLayout';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import AdminProducts from './pages/admin/AdminProducts';
+import AdminBlog from './pages/admin/AdminBlog';
+import AdminCategories from './pages/admin/AdminCategories';
+import AdminSettings from './pages/admin/AdminSettings';
+
+const MainLayout = () => {
+  return (
+    <div className="min-h-screen flex flex-col bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+      <TopNavBar />
+      <div className="flex-grow">
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
+  );
+};
 
 function App() {
   return (
     <HelmetProvider>
-      <BrowserRouter>
-        <div className="min-h-screen flex flex-col bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container">
-          <TopNavBar />
-          <div className="flex-grow">
-            <Routes>
+      <LanguageProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<MainLayout />}>
               <Route path="/" element={<Home />} />
               <Route path="/shop" element={<AllProducts />} />
+              <Route path="/product/:id" element={<ProductPage />} />
               <Route path="/categories" element={<Categories />} />
-              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog" element={<BlogList />} />
+              <Route path="/blog/:id" element={<BlogPost />} />
+              <Route path="/contact" element={<ContactFAQ />} />
               <Route path="/about" element={<About />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </div>
-          <Footer />
-        </div>
-      </BrowserRouter>
+            </Route>
+
+            <Route path="/admin" element={<AdminLayout />}>
+              <Route index element={<AdminDashboard />} />
+              <Route path="products" element={<AdminProducts />} />
+              <Route path="blog" element={<AdminBlog />} />
+              <Route path="categories" element={<AdminCategories />} />
+              <Route path="settings" element={<AdminSettings />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
     </HelmetProvider>
   );
 }

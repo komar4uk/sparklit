@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function TopNavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navLinkClass = ({ isActive }) =>
     isActive
@@ -20,29 +22,33 @@ export default function TopNavBar() {
         
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
-          <NavLink to="/" className={navLinkClass}>Home</NavLink>
-          <NavLink to="/shop" className={navLinkClass}>Shop</NavLink>
-          <NavLink to="/categories" className={navLinkClass}>Categories</NavLink>
-          <NavLink to="/blog" className={navLinkClass}>Blog</NavLink>
-          <NavLink to="/about" className={navLinkClass}>About</NavLink>
+          <NavLink to="/" className={navLinkClass}>{t('nav.home')}</NavLink>
+          <NavLink to="/shop" className={navLinkClass}>{t('nav.shop')}</NavLink>
+          <NavLink to="/blog" className={navLinkClass}>{t('nav.blog')}</NavLink>
+          <NavLink to="/contact" className={navLinkClass}>{t('nav.contact')}</NavLink>
         </div>
         
         <div className="hidden md:flex items-center space-x-6">
-          <div className="flex items-center bg-stone-100/50 dark:bg-stone-800/50 px-4 py-2 rounded-full">
-            <span className="material-symbols-outlined text-stone-400 text-sm mr-2">search</span>
-            <input 
-              type="text" 
-              placeholder="Search patterns..." 
-              className="bg-transparent border-none focus:ring-0 text-sm w-32 placeholder-stone-400 outline-none"
-            />
-          </div>
-          <button className="bg-primary text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide hover:bg-primary-dim transition-all duration-200 active:scale-95">
-            Sign In
+          <button 
+            onClick={toggleLanguage} 
+            className="text-sm font-bold uppercase tracking-wider text-stone-500 hover:text-teal-600 transition-colors"
+          >
+            {language === 'en' ? 'EN / UA' : 'UA / EN'}
           </button>
+
+          <Link to="/admin" className="bg-primary text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide hover:bg-primary-dim transition-all duration-200 active:scale-95">
+            {t('nav.admin')}
+          </Link>
         </div>
 
         {/* Mobile Toggle Button */}
-        <div className="md:hidden flex items-center z-50">
+        <div className="md:hidden flex items-center z-50 gap-4">
+          <button 
+            onClick={toggleLanguage} 
+            className="text-xs font-bold uppercase text-stone-500"
+          >
+            {language.toUpperCase()}
+          </button>
           <button 
             className="text-on-surface-variant p-2 focus:outline-none" 
             onClick={() => setIsOpen(!isOpen)}
@@ -56,15 +62,14 @@ export default function TopNavBar() {
       {/* Mobile Menu Dropdown */}
       <div className={`md:hidden absolute top-20 left-0 w-full bg-surface shadow-lg transition-all duration-300 origin-top overflow-hidden ${isOpen ? 'max-h-96 border-t border-outline-variant/10' : 'max-h-0'}`}>
         <div className="px-8 py-6 flex flex-col space-y-6 text-center">
-          <NavLink to="/" onClick={closeMenu} className={navLinkClass}>Home</NavLink>
-          <NavLink to="/shop" onClick={closeMenu} className={navLinkClass}>Shop</NavLink>
-          <NavLink to="/categories" onClick={closeMenu} className={navLinkClass}>Categories</NavLink>
-          <NavLink to="/blog" onClick={closeMenu} className={navLinkClass}>Blog</NavLink>
-          <NavLink to="/about" onClick={closeMenu} className={navLinkClass}>About</NavLink>
+          <NavLink to="/" onClick={closeMenu} className={navLinkClass}>{t('nav.home')}</NavLink>
+          <NavLink to="/shop" onClick={closeMenu} className={navLinkClass}>{t('nav.shop')}</NavLink>
+          <NavLink to="/blog" onClick={closeMenu} className={navLinkClass}>{t('nav.blog')}</NavLink>
+          <NavLink to="/contact" onClick={closeMenu} className={navLinkClass}>{t('nav.contact')}</NavLink>
           <div className="pt-4 border-t border-outline-variant/10">
-            <button className="w-full bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-primary-dim transition-all">
-              Sign In
-            </button>
+            <Link to="/admin" onClick={closeMenu} className="inline-block w-full bg-primary text-on-primary px-6 py-3 rounded-full text-sm font-semibold tracking-wide hover:bg-primary-dim transition-all">
+              {t('nav.admin')}
+            </Link>
           </div>
         </div>
       </div>
