@@ -47,8 +47,12 @@ export default function ProductPage() {
   if(product.difficulty?.toLowerCase() === 'medium') diffTrans = 'product.intermediate'; // Map Medium to Intermediate trans
 
   const galleryImages = [product.image, ...(product.images || [])];
-
   const shortQuote = product.description.split('.')[0] + '.';
+
+  const fallbackImage = "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000&auto=format&fit=crop";
+  const handleImageError = (e) => {
+    e.target.src = fallbackImage;
+  };
 
   return (
     <main className="pt-24 pb-12 px-6 max-w-7xl mx-auto">
@@ -61,7 +65,7 @@ export default function ProductPage() {
       <nav className="mb-8 flex items-center gap-2 text-xs uppercase tracking-widest text-on-surface-variant font-medium">
         <Link to="/shop" className="hover:text-primary transition-colors">{t('nav.shop')}</Link>
         <span className="material-symbols-outlined text-[14px]">chevron_right</span>
-        <Link to={`/categories`} className="hover:text-primary transition-colors">{product.category}</Link>
+        <Link to={`/categories`} className="hover:text-primary transition-colors">{t('categories.tag')}</Link>
         <span className="material-symbols-outlined text-[14px]">chevron_right</span>
         <span className="text-primary font-bold">{product.name}</span>
       </nav>
@@ -74,6 +78,7 @@ export default function ProductPage() {
             <img 
               src={activeImage} 
               alt={product.name} 
+              onError={handleImageError}
               className="w-full h-auto rounded-xl shadow-sm object-cover aspect-[4/5] bg-surface-container-low transition-opacity duration-500"
             />
             <div className="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -95,7 +100,7 @@ export default function ProductPage() {
                   onClick={() => setActiveImage(img)}
                   className={`flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-xl overflow-hidden border-2 transition-all duration-300 ${activeImage === img ? 'border-primary opacity-100 ring-2 ring-primary/20' : 'border-transparent opacity-60 hover:opacity-100 bg-surface-container-low'}`}
                 >
-                  <img src={img} alt={`${product.name} view ${idx + 1}`} className="w-full h-full object-cover" />
+                  <img src={img} alt={`${product.name} view ${idx + 1}`} onError={handleImageError} className="w-full h-full object-cover" />
                 </button>
               ))}
             </div>
@@ -165,7 +170,7 @@ export default function ProductPage() {
         <section className="mt-32">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
             <div className="space-y-2">
-              <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold">Curated Journey</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold">{t('product.curatedJourney')}</p>
               <h2 className="text-4xl font-headline italic">{t('product.relatedProducts')}</h2>
             </div>
             <Link to="/shop" className="font-headline text-on-surface-variant border-b-2 border-tertiary-container pb-1 hover:border-tertiary transition-colors">

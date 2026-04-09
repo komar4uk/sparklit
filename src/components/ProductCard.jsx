@@ -10,12 +10,19 @@ export default function ProductCard({ product }) {
   const priceNum = parseFloat(priceStr) || 0;
   const priceDisplay = language === 'en' ? `$${priceNum.toFixed(2)}` : `₴${(priceNum * 41).toFixed(0)}`;
 
+  const fallbackImage = "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000&auto=format&fit=crop";
+
+  const handleImageError = (e) => {
+    e.target.src = fallbackImage;
+  };
+
   return (
     <Link to={`/product/${product.id}`} className="group cursor-pointer block">
       <div className="relative overflow-hidden rounded-xl bg-surface-container-lowest transition-all group-hover:-translate-y-2">
         <img 
           src={product.image} 
           alt={product.name} 
+          onError={handleImageError}
           className="w-full aspect-[3/4] object-cover rounded-xl transition-transform duration-700 group-hover:scale-110" 
           loading="lazy"
         />

@@ -5,9 +5,30 @@ export default function AdminProducts() {
   const [products, setProducts] = useState(initialProducts);
   const [isEditing, setIsEditing] = useState(false);
   const [currentProduct, setCurrentProduct] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filterCategory, setFilterCategory] = useState('All Categories');
+
+  const categories = ['All Categories', ...new Set(initialProducts.map(p => {
+    const cat = p.category || '';
+    return cat.charAt(0).toUpperCase() + cat.slice(1).toLowerCase();
+  }))];
+
+  const filteredProducts = products.filter(p => {
+    const nameMatch = p.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const catMatch = filterCategory === 'All Categories' || (p.category || '').toLowerCase() === filterCategory.toLowerCase();
+    return nameMatch && catMatch;
+  });
+
+  const getPriceValue = (price) => {
+    if (typeof price === 'number') return price;
+    return parseFloat(String(price || '0').replace(/[^0-9.]/g, '')) || 0;
+  };
 
   const handleEdit = (product) => {
-    setCurrentProduct(product);
+    setCurrentProduct({
+      ...product,
+      price: getPriceValue(product.price)
+    });
     setIsEditing(true);
   };
 
@@ -131,12 +152,22 @@ export default function AdminProducts() {
         <div className="p-4 border-b border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="relative w-full md:w-96">
             <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-stone-400">search</span>
-            <input type="text" placeholder="Search products..." className="w-full pl-10 pr-4 py-2 border border-stone-200 dark:border-stone-800 rounded-lg text-sm bg-stone-50 dark:bg-stone-950 focus:outline-none focus:border-teal-500 transition-colors" />
+            <input 
+              type="text" 
+              placeholder="Search products..." 
+              value={searchQuery}
+              onChange={e => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 border border-stone-200 dark:border-stone-800 rounded-lg text-sm bg-stone-50 dark:bg-stone-950 focus:outline-none focus:border-teal-500 transition-colors" 
+            />
           </div>
-          <select className="border border-stone-200 dark:border-stone-800 rounded-lg px-4 py-2 text-sm bg-transparent outline-none">
-            <option>All Categories</option>
-            <option>Animals</option>
-            <option>Landscapes</option>
+          <select 
+            value={filterCategory}
+            onChange={e => setFilterCategory(e.target.value)}
+            className="border border-stone-200 dark:border-stone-800 rounded-lg px-4 py-2 text-sm bg-transparent outline-none cursor-pointer"
+          >
+            {categories.map(cat => (
+              <option key={cat} value={cat}>{cat}</option>
+            ))}
           </select>
         </div>
 
@@ -152,7 +183,7 @@ export default function AdminProducts() {
               </tr>
             </thead>
             <tbody className="divide-y divide-stone-200 dark:divide-stone-800">
-              {products.map((product) => (
+              {filteredProducts.map((product) => (
                 <tr key={product.id} className="hover:bg-stone-50 dark:hover:bg-stone-800/50 transition-colors">
                   <td className="p-4 pl-6">
                     <img src={product.image} className="w-12 h-12 rounded object-cover shadow-sm bg-stone-100" alt="" />
@@ -165,7 +196,7 @@ export default function AdminProducts() {
                     <span className="bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300 px-2 py-1 rounded text-xs font-semibold">{product.category}</span>
                   </td>
                   <td className="p-4 font-semibold text-stone-900 dark:text-stone-200">
-                    ${Number(product.price).toFixed(2)}
+                    ${getPriceValue(product.price).toFixed(2)}
                   </td>
                   <td className="p-4 pr-6 text-right">
                     <div className="flex items-center justify-end gap-2">
@@ -179,7 +210,7 @@ export default function AdminProducts() {
                   </td>
                 </tr>
               ))}
-              {products.length === 0 && (
+              {filteredProducts.length === 0 && (
                 <tr>
                   <td colSpan="5" className="p-8 text-center text-stone-500">No products found.</td>
                 </tr>

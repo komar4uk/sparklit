@@ -49,7 +49,7 @@ export default function AllProducts() {
                       onClick={() => setActiveCategory(cat)}
                       className={`flex items-center justify-between cursor-pointer transition-colors ${activeCategory === cat ? "text-primary font-semibold" : "text-on-surface-variant hover:text-primary"}`}
                     >
-                      {cat === "All" ? t('nav.shop') : cat} 
+                      {cat === "All" ? t('shop.all') : cat} 
                       <span className={`text-[10px] px-2 rounded-full ${activeCategory === cat ? "bg-primary-container" : "bg-surface-container"}`}>
                         {cat === "All" ? products.length : products.filter(p => (p.category || '').toLowerCase() === cat.toLowerCase()).length}
                       </span>
@@ -63,7 +63,7 @@ export default function AllProducts() {
                 <div className="space-y-2">
                   {['All', 'Beginner', 'Medium', 'Advanced'].map((diff, i) => {
                     let label = diff;
-                    if(diff === 'All') label = t('nav.shop');
+                    if(diff === 'All') label = t('shop.all');
                     if(diff === 'Beginner') label = t('product.beginnerFriendly');
                     if(diff === 'Medium') label = t('product.intermediate');
                     if(diff === 'Advanced') label = t('product.advanced');
@@ -95,7 +95,7 @@ export default function AllProducts() {
                 <div className="space-y-2">
                   {['All', 'Resin', 'Acrylic'].map((type, i) => {
                     let label = type;
-                    if(type === 'All') label = t('nav.shop');
+                    if(type === 'All') label = t('shop.all');
                     if(type === 'Resin') label = t('product.resin');
                     if(type === 'Acrylic') label = t('product.acrylic');
 
