@@ -92,5 +92,345 @@
       "https://ae-pic-a1.aliexpress-media.com/kf/Sf2b84d22661344778347c607e564f831Q.jpg"
     ],
     "affiliate_link": "https://www.aliexpress.com/item/1005009998035093.html"
+  },
+  {
+    "id": "evershine-fox-family",
+    "name": "EverShine Fox Family Diamond Painting",
+    "category": "animals",
+    "drill_type": "resin",
+    "description": "A charming fox family captured in a beautiful diamond painting. This kit features high-definition canvas and vibrant tones.",
+    "size": "40x50cm",
+    "difficulty": "Medium",
+    "price": "$7.50",
+    "image": "https://ae04.alicdn.com/kf/Hec650637df4c466782df4b069904d9a3T.jpg",
+    "images": [
+      "https://ae04.alicdn.com/kf/Hec650637df4c466782df4b069904d9a3T.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/S7187029c782046208bb46bd69be20f04F.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/S0b7692be432e4d079979b007137f8480F.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/32669422532.html"
+  },
+  {
+    "id": "evershine-majestic-lions",
+    "name": "EverShine Majestic Lions Diamond Painting",
+    "category": "animals",
+    "drill_type": "resin",
+    "description": "Majestic lions portrayed in a stunning mosaic style. Perfect for animal lovers seeking a rewarding crafting experience.",
+    "size": "50x70cm",
+    "difficulty": "Advanced",
+    "price": "$6.90",
+    "image": "https://ae04.alicdn.com/kf/Hdc1f6e91736e4f8ea823868ed2932e1cq.jpg",
+    "images": [
+      "https://ae04.alicdn.com/kf/Hdc1f6e91736e4f8ea823868ed2932e1cq.jpg",
+      "https://ae04.alicdn.com/kf/Hec650637df4c466782df4b069904d9a3T.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Sd44b6e879fb44901a0f9e739b0155365k.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/4000642933262.html"
+  },
+  {
+    "id": "evershine-vintage-bicycle-peonies",
+    "name": "EverShine Vintage Bicycle & Peonies",
+    "category": "nature",
+    "drill_type": "resin",
+    "description": "A romantic vintage bicycle laden with fresh pink peonies. Shimmering resin drills on a high-definition canvas.",
+    "size": "40x50cm",
+    "difficulty": "Medium",
+    "price": "$6.70",
+    "image": "https://ae04.alicdn.com/kf/Hfb2f6e91736e4f8ea823868ed2932e1co.jpg",
+    "images": [
+      "https://ae04.alicdn.com/kf/Hfb2f6e91736e4f8ea823868ed2932e1co.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/S95f2abe6b60649368271f6f09f104d9aU.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Hec650637df4c466782df4b069904d9a3T.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/4000522806161.html"
+  },
+  {
+    "id": "evershine-japanese-cherry-blossom",
+    "name": "EverShine Japanese Cherry Blossom Garden",
+    "category": "nature",
+    "drill_type": "resin",
+    "description": "A serene Japanese garden featuring cherry blossoms in full bloom with a traditional pagoda in the background.",
+    "size": "50x70cm",
+    "difficulty": "Advanced",
+    "price": "$8.50",
+    "image": "https://ae04.alicdn.com/kf/Ha9f230c25eb541c59a415b8d8d69294by.jpg",
+    "images": [
+      "https://ae04.alicdn.com/kf/Ha9f230c25eb541c59a415b8d8d69294by.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Sd44b6e879fb44901a0f9e739b0155365k.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Sbfd8f1a648094e3cb8d1f18316eeaac3B.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/1005004178279519.html"
+  },
+  {
+    "id": "evershine-fantasy-girl-portrait",
+    "name": "EverShine Fantasy Girl Portrait",
+    "category": "people",
+    "drill_type": "resin",
+    "description": "An elegant and soulful fantasy portrait of a girl. Detailed diamond painting kit with fine resin drills.",
+    "size": "30x40cm",
+    "difficulty": "Medium",
+    "price": "$7.20",
+    "image": "https://ae04.alicdn.com/kf/He3d230c25eb541c59a415b8d8d69294bc.jpg",
+    "images": [
+      "https://ae04.alicdn.com/kf/He3d230c25eb541c59a415b8d8d69294bc.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/S7187029c782046208bb46bd69be20f04F.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Sa50e72098cb749859a011fdce8f95d59P.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/4000102834836.html"
+  },
+  {
+    "id": "evershine-owl-mosaic",
+    "name": "EverShine Owl Diamond Painting",
+    "category": "animals",
+    "drill_type": "resin",
+    "description": "A stunning DIY owl diamond painting kit. Premium resin drills create a detailed and vibrant mosaic.",
+    "size": "40x30cm",
+    "difficulty": "Medium",
+    "price": "$7.65",
+    "image": "https://ae01.alicdn.com/kf/S142fde682e3943db825715542d72e511b.jpg",
+    "images": [
+      "https://ae01.alicdn.com/kf/S142fde682e3943db825715542d72e511b.jpg",
+      "https://ae01.alicdn.com/kf/S22f6c679c52f4befa59fd2dbe52b5f1aX.jpg",
+      "https://ae01.alicdn.com/kf/S5b67b2d3c8a440a78e8d57ecf36b260fj.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/4000712501352.html"
+  },
+  {
+    "id": "evershine-custom-photo",
+    "name": "EverShine Custom Photo Portrait",
+    "category": "people",
+    "drill_type": "resin",
+    "description": "Transform your memories into art. Personalized kit using high-quality resin drills to recreate your photo.",
+    "size": "40x40cm",
+    "difficulty": "Advanced",
+    "price": "$6.85",
+    "image": "https://ae01.alicdn.com/kf/Sf3ac6bce858141a58337095413a50b600.jpg",
+    "images": [
+      "https://ae01.alicdn.com/kf/Sf3ac6bce858141a58337095413a50b600.jpg",
+      "https://ae01.alicdn.com/kf/S7cc5b7f5d21b49c48314fe0559756a3ct.jpg",
+      "https://ae01.alicdn.com/kf/S1c08f3172c3b48c5bc465bf1393cf081w.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/4000902308026.html"
+  },
+  {
+    "id": "evershine-ab-drill-custom",
+    "name": "EverShine AB Drill Custom Photo",
+    "category": "people",
+    "drill_type": "resin",
+    "description": "Elevate your custom project with AB (Aurora Borealis) drills for extra sparkle and iridescent highlights.",
+    "size": "45x60cm",
+    "difficulty": "Advanced",
+    "price": "$7.80",
+    "image": "https://ae01.alicdn.com/kf/Sfe019429ac6d40ffbfc8898b53b5a9deQ.jpg",
+    "images": [
+      "https://ae01.alicdn.com/kf/Sfe019429ac6d40ffbfc8898b53b5a9deQ.jpg",
+      "https://ae01.alicdn.com/kf/He6ad688975c847df9db4bff3fb3526048.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Sdf516e9baa7745b39f7c8bf1379a4fdcR.png"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/1005004799869516.html"
+  },
+  {
+    "id": "evershine-dogs-on-bus",
+    "name": "EverShine Dogs on Bus",
+    "category": "animals",
+    "drill_type": "resin",
+    "description": "Whimsical DIY diamond painting featuring a group of dogs on a cartoon bus. Fun and vibrant for all ages.",
+    "size": "40x30cm",
+    "difficulty": "Beginner",
+    "price": "$8.55",
+    "image": "https://ae-pic-a1.alicdn.com/kf/S1a72ecb41fee4869893c8c1f0829863dO.jpg",
+    "images": [
+      "https://ae-pic-a1.alicdn.com/kf/S1a72ecb41fee4869893c8c1f0829863dO.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/S7093ae7449034ee4a315322c8979b1fde.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/S352e11390b3342e2b83c5f2a76d0d5546.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/1005004246746600.html"
+  },
+  {
+    "id": "evershine-tree-landscape",
+    "name": "EverShine Tree Landscape",
+    "category": "nature",
+    "drill_type": "resin",
+    "description": "Serene DIY landscape featuring lush trees and a historic church by the water. Captures delicate lighting.",
+    "size": "45x60cm",
+    "difficulty": "Medium",
+    "price": "$4.85",
+    "image": "https://ae-pic-a1.alicdn.com/kf/Hecc47923590e4e369e1585273d65f533u.jpg",
+    "images": [
+      "https://ae-pic-a1.alicdn.com/kf/Hecc47923590e4e369e1585273d65f533u.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/H1be2171736da48e0a823868ed2932e1cp.png",
+      "https://ae-pic-a1.alicdn.com/kf/H5af3696e57424270bf6d34aff812ad18z.png"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/4000354800621.html"
+  },
+  {
+    "id": "evershine-japanese-pagoda",
+    "name": "Japanese Pagoda Garden",
+    "category": "nature",
+    "drill_type": "resin",
+    "description": "A stunning kit featuring a serene Japanese pagoda set in a lush garden with blooming cherry blossoms.",
+    "size": "40x40cm",
+    "difficulty": "Medium",
+    "price": "$3.70",
+    "image": "https://ae-pic-a1.alicdn.com/kf/S870981ebd3d641abb93779096682a33dI.jpg",
+    "images": [
+      "https://ae-pic-a1.alicdn.com/kf/S870981ebd3d641abb93779096682a33dI.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/S0e37e999a15b4073a3ac81bfe09618eev.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Sa0809e6b7ff44da6b4f8a9d72f618670r.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/1005011948190021.html"
+  },
+  {
+    "id": "homfun-custom-photo",
+    "name": "Custom Photo Diamond Painting",
+    "category": "people",
+    "drill_type": "resin",
+    "description": "Transform your own photos into high-quality mosaic art with premium resin drills from HOMFUN.",
+    "size": "40x50cm",
+    "difficulty": "Advanced",
+    "price": "$7.05",
+    "image": "https://ae01.alicdn.com/kf/H7ec59c6d4824424db8b89e3a3ca74cce4.jpg",
+    "images": [
+      "https://ae01.alicdn.com/kf/H7ec59c6d4824424db8b89e3a3ca74cce4.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/HTB1oyzEsH1YBuNjSszeq6yblFXaE.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/HTB10yzEsH1YBuNjSszeq6yblFXaD.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/32845497995.html"
+  },
+  {
+    "id": "evershine-personal-photo-custom",
+    "name": "Personal Photo Custom Kit",
+    "category": "people",
+    "drill_type": "resin",
+    "description": "High-definition canvas and vibrant resin drills for a detailed recreation of your favorite memories by EverShine.",
+    "size": "60x80cm",
+    "difficulty": "Advanced",
+    "price": "$7.15",
+    "image": "https://ae01.alicdn.com/kf/S6ba283b01e34486da62b0fe4df88c14cU.jpg",
+    "images": [
+      "https://ae01.alicdn.com/kf/S6ba283b01e34486da62b0fe4df88c14cU.jpg",
+      "https://ae01.alicdn.com/kf/S59c8775438de4b76b6dbf8b89e3a3ca74cce4.jpg",
+      "https://ae01.alicdn.com/kf/Sdb9b531cdd6444219856bf19e32c0a0dk.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/32737520362.html"
+  },
+  {
+    "id": "homfun-floral-bloom",
+    "name": "Floral Diamond Painting Bloom",
+    "category": "nature",
+    "drill_type": "resin",
+    "description": "An elegant floral arrangement featuring vibrant pink roses. Rich finish with high-quality resin drills.",
+    "size": "40x50cm",
+    "difficulty": "Medium",
+    "price": "$7.05",
+    "image": "https://ae04.alicdn.com/kf/S71d568c44cc64edd83baad40fc5cc61fu.jpg",
+    "images": [
+      "https://ae04.alicdn.com/kf/S71d568c44cc64edd83baad40fc5cc61fu.jpg",
+      "https://ae04.alicdn.com/kf/S483031f838b54f7ebeff7a03d2662a5ev.jpg",
+      "https://ae04.alicdn.com/kf/Saab1186ef20645c3a5cc7e42ea96a03fC.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/32844987121.html"
+  },
+  {
+    "id": "homfun-official-custom",
+    "name": "HOMFUN Official Custom Photo",
+    "category": "people",
+    "drill_type": "resin",
+    "description": "Premium custom service from HOMFUN Official Store. Professional preparation for all custom photo needs.",
+    "size": "40x50cm",
+    "difficulty": "Advanced",
+    "price": "$7.05",
+    "image": "https://ae01.alicdn.com/kf/Se03c84e129d54399a15fce2f12ff9dcbU.jpg",
+    "images": [
+      "https://ae01.alicdn.com/kf/Se03c84e129d54399a15fce2f12ff9dcbU.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/HTB1WJabkByWBuNkSmFPq6xguVXaG.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/HTB1MZHDsFOWBuNjy0Fiq6xFxVXa9.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/32829983096.html"
+  },
+  {
+    "id": "homfun-photo-custom-factory",
+    "name": "Homfun Photo Custom Factory",
+    "category": "people",
+    "drill_type": "resin",
+    "description": "Preserve your favorites memories in a sparkling 5D mosaic. Professional factory quality drills.",
+    "size": "40x50cm",
+    "difficulty": "Advanced",
+    "price": "$10.45",
+    "image": "https://ae04.alicdn.com/kf/S21177cda9956432585a1e09298301845D.jpg",
+    "images": [
+      "https://ae04.alicdn.com/kf/S21177cda9956432585a1e09298301845D.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Hed61b468d45a4d60b5df35066b8dbc19R.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/HTB1UtHZTgHqK1RjSZJnq6zNLpXa7.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/4000067071106.html"
+  },
+  {
+    "id": "homfun-ocean-wave",
+    "name": "Homfun Ocean Wave",
+    "category": "nature",
+    "drill_type": "resin",
+    "description": "Captures the dynamic energy of the sea in a stunning 5D mosaic. Deep blues and iridescent highlights.",
+    "size": "40x50cm",
+    "difficulty": "Medium",
+    "price": "$7.05",
+    "image": "https://ae-pic-a1.alicdn.com/kf/S339e96027d3d4bf097db5272eb043fdfw.jpg",
+    "images": [
+      "https://ae-pic-a1.alicdn.com/kf/S339e96027d3d4bf097db5272eb043fdfw.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/S483031f838b54f7ebeff7a03d2662a5ev.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Saab1186ef20645c3a5cc7e42ea96a03fC.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/32871911485.html"
+  },
+  {
+    "id": "homfun-individual-photo",
+    "name": "Individual Photo Custom Kit",
+    "category": "people",
+    "drill_type": "resin",
+    "description": "Turn any photo into a detailed and colorful mosaic with this premium kit from Homfun.",
+    "size": "50x70cm",
+    "difficulty": "Advanced",
+    "price": "$6.55",
+    "image": "https://ae-pic-a1.alicdn.com/kf/Sc25d15aa42454abd92ad5a16c7e4b1a6X.jpg",
+    "images": [
+      "https://ae-pic-a1.alicdn.com/kf/Sc25d15aa42454abd92ad5a16c7e4b1a6X.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Sda90b90bfa344e6d96f2f516ced9409aU.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/S2d4a65a6d1624297b2193134fbda35a7r.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/32899781734.html"
+  },
+  {
+    "id": "evershine-wildlife-trio",
+    "name": "EverShine Wildlife Trio",
+    "category": "animals",
+    "drill_type": "resin",
+    "description": "Majestic animal portrait featuring tiger, leopard, and cat themes. High-quality contrast and rich colors.",
+    "size": "50x70cm",
+    "difficulty": "Advanced",
+    "price": "$7.60",
+    "image": "https://ae-pic-a1.alicdn.com/kf/S2369d43d70b141b5a031cba136e0848ex.jpg",
+    "images": [
+      "https://ae-pic-a1.alicdn.com/kf/S2369d43d70b141b5a031cba136e0848ex.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Sd46da97dcd4e4e908467033db08aeacdt.jpg",
+      "https://ae-pic-a1.alicdn.com/kf/Sfe019429ac6d40ffbfc8898b53b5a9deQ.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/1005003379298525.html"
+  },
+  {
+    "id": "evershine-night-city-landscape",
+    "name": "EverShine Night City",
+    "category": "nature",
+    "drill_type": "resin",
+    "description": "Stunning landscape featuring a majestic bridge and illuminated night skyline. High-quality 5D mosaic.",
+    "size": "70x50cm",
+    "difficulty": "Advanced",
+    "price": "$17.20",
+    "image": "https://ae04.alicdn.com/kf/H75bb4c1ab5b44477b8b659e46b70c6b8I.jpg",
+    "images": [
+      "https://ae04.alicdn.com/kf/H75bb4c1ab5b44477b8b659e46b70c6b8I.jpg",
+      "https://ae04.alicdn.com/kf/Sadc6e69a2d264051a4e52a43a7d15be40.jpg",
+      "https://ae04.alicdn.com/kf/Sddb7c060662e46dea78e22aed12b2f7aX.jpg"
+    ],
+    "affiliate_link": "https://www.aliexpress.com/item/4000907216374.html"
   }
 ]
